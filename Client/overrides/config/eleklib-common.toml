@@ -1,0 +1,47 @@
+
+#Global Values to do with the mod
+[ModValue]
+	#Enable debug mode
+	debug = false
+
+#Value for log cleanup module
+["Log Cleanup"]
+	#Is the log cleanup module active?
+	cleanup-logs = true
+	#Number of log files to keep (This includes the current latest & debug)
+	#Range: 1 ~ 64
+	max-log = 5
+	#Is the crash report cleanup module active?
+	cleanup-crash = true
+	#Number of crash reports to keep
+	#Range: 1 ~ 64
+	max-crash = 3
+
+#Values to do with old command management
+[Commands]
+	#Should oldstyle commands be registered
+	register-command = true
+	#Should the selected builded be forced, even if a command overrides it?
+	forceBuilder = false
+	#What version builder should be used? (Options: V1, V2) See https://gitlab.com/eleksploded/eleklib/-/wikis/Command%20Wrapper for info on the versions
+	builder-version = "V1"
+
+	#Value for the V2 Command Builder
+	[Commands."V2 Builder"]
+		#Max number of args that can be autocompleted
+		#Range: 1 ~ 10
+		maxArgs = 3
+
+#Messages for the update checker module
+["Update Checker"]
+	#Enable/Disable the update checker module
+	updateCheckEnabled = true
+	#ModIds to ignore for update checks
+	ignoreUpdates = []
+	#Message for an outdated beta build. Use $1 for the mod name. Use $2 for the new version
+	betaOutdatedMessage = "A new beta build ($2) is avalible for $1"
+	#Message for if the update checker fails. Use $1 for the mod name.
+	failedMessage = "There was an error checking for updates for $1"
+	#Message for an outdated release build. Use $1 for the mod name. Use $2 for the new version
+	outdatedMessage = "A new update ($2) is avalible for $1"
+

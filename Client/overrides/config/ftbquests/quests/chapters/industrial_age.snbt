@@ -1,0 +1,604 @@
+{
+	id: "6863F990D396341C",
+	group: "",
+	order_index: 2,
+	filename: "industrial_age",
+	title: "Industrial Age",
+	icon: "titanium:iron_gear",
+	default_quest_shape: "",
+	quests: [
+		{
+			title: "The Industrial Age",
+			icon: "titanium:iron_gear",
+			x: 1.0d,
+			y: 9.0d,
+			id: "1BDCE3568614CB60",
+			tasks: [{
+				id: "4837BE8E2A818814",
+				type: "checkmark"
+			}]
+		},
+		{
+			title: "Your Life Line ",
+			x: 1.0d,
+			y: 3.0d,
+			shape: "hexagon",
+			description: [
+				"This Tome seems to be a bit magical As it shows you more knowledge the more you complete in Astral.",
+				"If you have any questions on how to build a structure consult the Tome as every mulit block in Astral is shown in this Tome"
+			],
+			dependencies: ["1BDCE3568614CB60"],
+			id: "4ADA6E2864F4B1D4",
+			tasks: [
+				{
+					id: "02053C7ADABB2B10",
+					type: "item",
+					item: "astralsorcery:tome"
+				},
+				{
+					id: "5B06F306E41034F9",
+					type: "item",
+					item: "astralsorcery:aquamarine",
+					count: 4L
+				}
+			],
+			rewards: [{
+				id: "1D2FD7C0000AD97D",
+				type: "item",
+				item: "astralsorcery:aquamarine",
+				count: 4
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -2.0d,
+			description: [
+				"What are these strange floating crystals in the strutures.",
+				"Well there useful i'll say that if you open the crystal to sky and place a crafting table under it the crafting table will change into something."
+			],
+			dependencies: ["40140004F41378CB"],
+			hide: false,
+			id: "584E24E49B1B964A",
+			tasks: [{
+				id: "4FDDE836B413F479",
+				type: "item",
+				item: "astralsorcery:wand"
+			}],
+			rewards: [{
+				id: "5421E44050E5F586",
+				type: "item",
+				item: "astralsorcery:rock_crystal_ore"
+			}]
+		},
+		{
+			title: "Constellation paper",
+			x: 1.0d,
+			y: 0.5d,
+			description: [
+				"These papers can be found commonly in astral structures.",
+				"They can also be stored in the Astral Tome by shift right clicking the tome. Note only papers you understand can be stored this way. The papers that arent discoverd are still worth keeping."
+			],
+			dependencies: ["4ADA6E2864F4B1D4"],
+			id: "40140004F41378CB",
+			tasks: [{
+				id: "47C12F17DBC1DCF7",
+				type: "checkmark",
+				icon: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {}
+					}
+				}
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -4.0d,
+			description: ["These crystal tools may seem like a waste of good rock crystals but i'd say they arent as even a bad rock crystal makes a better then diamond pickaxe."],
+			dependencies: ["584E24E49B1B964A"],
+			id: "76A666BF0A0C7CCD",
+			tasks: [{
+				id: "7A8AC0F54076E2AB",
+				type: "item",
+				item: {
+					id: "astralsorcery:crystal_pickaxe",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							crystalProperties: {
+								attributes: [
+									{
+										property: "astralsorcery:size",
+										pLevel: 3,
+										discovered: 1b
+									},
+									{
+										property: "astralsorcery:shape",
+										pLevel: 3,
+										discovered: 1b
+									},
+									{
+										property: "astralsorcery:tool.durability",
+										pLevel: 3,
+										discovered: 1b
+									},
+									{
+										property: "astralsorcery:tool.efficiency",
+										pLevel: 3,
+										discovered: 1b
+									}
+								]
+							}
+						},
+						Damage: 0
+					}
+				}
+			}]
+		},
+		{
+			x: 3.0d,
+			y: -3.0d,
+			description: ["Only major source of liquid starlight in Astral"],
+			dependencies: ["584E24E49B1B964A"],
+			id: "0EDACBD8775B73FE",
+			tasks: [{
+				id: "7D28768F008FADA7",
+				type: "item",
+				item: "astralsorcery:well"
+			}]
+		},
+		{
+			x: 3.5d,
+			y: -1.0d,
+			dependencies: ["0EDACBD8775B73FE"],
+			id: "663B47790C08A031",
+			tasks: [{
+				id: "72B893A946861ADF",
+				type: "item",
+				item: "astralsorcery:liquid_starlight_bucket",
+				consume_items: true
+			}],
+			rewards: [{
+				id: "0ADC7AA0200E7AB5",
+				type: "item",
+				item: "astralsorcery:well"
+			}]
+		},
+		{
+			x: 5.0d,
+			y: -3.0d,
+			shape: "circle",
+			description: [
+				"As you dive deeper into astral you will see liquid starlight becomes a major resource.",
+				"so how do you get large amounts of aquamarine to convert into liquid starlight. well im glad you asked, As you can make a aquamarine generator under the same guides as a cobblestone gen just use liquid starlight instead of water.",
+				"Now the odds are low but if you automate it the aquamarine ore comes at a steady enough pace i would recommend using a andesite hopper from create as a normal hopper cant keep up with the amount of sand."
+			],
+			dependencies: ["0EDACBD8775B73FE"],
+			id: "694E0F4DB2EBCCB4",
+			tasks: [{
+				id: "3C6521EA45ABA0EA",
+				type: "item",
+				item: "astralsorcery:aquamarine_sand_ore"
+			}],
+			rewards: [{
+				id: "65778D5E27AE7553",
+				type: "item",
+				item: "astralsorcery:aquamarine_sand_ore",
+				count: 10
+			}]
+		},
+		{
+			x: -1.0d,
+			y: -3.0d,
+			description: [
+				"Welcome to Astral and to your first major crafting altar using this table and the starlight to receives you can farther yourself along in Astral.",
+				"If you need to find out how to build this its in the Tome under exploration."
+			],
+			dependencies: ["584E24E49B1B964A"],
+			id: "009FC60762858942",
+			tasks: [
+				{
+					id: "3CF423F9A9C7355D",
+					type: "item",
+					item: "astralsorcery:altar_attunement"
+				},
+				{
+					id: "285DD4CC5A81B962",
+					type: "item",
+					item: "astralsorcery:marble_arch",
+					count: 28L
+				},
+				{
+					id: "47F0CEF38117AF13",
+					type: "item",
+					item: "astralsorcery:marble_chiseled",
+					count: 8L
+				},
+				{
+					id: "319849E6448FF3A3",
+					type: "item",
+					item: "astralsorcery:black_marble_raw",
+					count: 21L
+				},
+				{
+					id: "14F202A032CC75C8",
+					type: "item",
+					item: "astralsorcery:marble_bricks",
+					count: 24L
+				},
+				{
+					id: "295727AC28FFE0EB",
+					type: "item",
+					item: "astralsorcery:marble_pillar",
+					count: 8L
+				}
+			],
+			rewards: [{
+				id: "5ABC20C756DC07C9",
+				type: "item",
+				item: "astralsorcery:marble_raw",
+				count: 64
+			}]
+		},
+		{
+			x: -0.5d,
+			y: -6.0d,
+			dependencies: ["5EFE1E965811AB8F"],
+			id: "792D67C2A00F6071",
+			tasks: [{
+				id: "0C14E0DB433AF493",
+				type: "item",
+				item: "astralsorcery:spectral_relay",
+				count: 10L
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -6.5d,
+			description: [
+				"Using one of the 5 major constellations you can attune yourself to one of them giving you access to new abilities.",
+				"to preform this you need to have at least one of the 5 major constellations discovered in the night sky using the telescope, when holding a discoved paper in the offhand you can walk up to the altar and you will see sparks place a relay on each spark",
+				"This can only be done at night."
+			],
+			dependencies: ["792D67C2A00F6071"],
+			id: "05A6F2D9548D10DE",
+			tasks: [
+				{
+					id: "1C3FDA8441014EF8",
+					type: "item",
+					item: "astralsorcery:attunement_altar"
+				},
+				{
+					id: "0366F7F45F10ABB2",
+					type: "item",
+					item: "astralsorcery:marble_runed",
+					count: 4L
+				},
+				{
+					id: "0BB20F36707E735F",
+					type: "item",
+					item: "astralsorcery:marble_arch",
+					count: 80L
+				},
+				{
+					id: "7840048A98CE12ED",
+					type: "item",
+					item: "astralsorcery:black_marble_raw",
+					count: 225L
+				},
+				{
+					id: "299909EC03C9437A",
+					type: "item",
+					item: "astralsorcery:marble_pillar",
+					count: 12L
+				},
+				{
+					id: "5767BF6B11453D76",
+					type: "item",
+					item: "astralsorcery:marble_chiseled",
+					count: 4L
+				}
+			],
+			rewards: [{
+				id: "07FE2818C3DF09AC",
+				type: "item",
+				item: "astralsorcery:spectral_relay",
+				count: 5
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -1.0d,
+			shape: "circle",
+			description: ["used to discover constellations in the sky that the papers reference."],
+			dependencies: ["009FC60762858942"],
+			id: "7EE8BC17A4CDA94D",
+			tasks: [{
+				id: "6D0D5126809F5D1D",
+				type: "item",
+				item: "astralsorcery:telescope"
+			}]
+		},
+		{
+			title: "Armara",
+			x: -2.5d,
+			y: -0.5d,
+			dependencies: ["7EE8BC17A4CDA94D"],
+			id: "7024181085B7D420",
+			tasks: [{
+				id: "3861135A5158D74B",
+				type: "item",
+				item: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							constellationName: "astralsorcery:armara"
+						}
+					}
+				}
+			}]
+		},
+		{
+			title: "Aevitas",
+			x: -1.5d,
+			y: 0.0d,
+			dependencies: ["7EE8BC17A4CDA94D"],
+			id: "17E9258E32ACF39C",
+			tasks: [{
+				id: "11F4E3A89AEA8406",
+				type: "item",
+				item: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							constellationName: "astralsorcery:aevitas"
+						}
+					}
+				}
+			}]
+		},
+		{
+			title: "Vicio",
+			x: -2.5d,
+			y: 0.5d,
+			dependencies: ["7EE8BC17A4CDA94D"],
+			id: "3DABBA72D57F8EC6",
+			tasks: [{
+				id: "5F1DECE1E0E6D6D2",
+				type: "item",
+				item: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							constellationName: "astralsorcery:vicio"
+						}
+					}
+				}
+			}]
+		},
+		{
+			title: "Evorsio",
+			x: -1.5d,
+			y: 1.0d,
+			dependencies: ["7EE8BC17A4CDA94D"],
+			id: "73C28D1CB483F476",
+			tasks: [{
+				id: "7EDD9AE42E8BDA09",
+				type: "item",
+				item: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							constellationName: "astralsorcery:evorsio"
+						}
+					}
+				}
+			}]
+		},
+		{
+			title: "Discidia",
+			x: -3.5d,
+			y: 0.0d,
+			shape: "circle",
+			dependencies: ["7EE8BC17A4CDA94D"],
+			id: "40F5A00B926D8554",
+			tasks: [{
+				id: "54E11EB95B927C7B",
+				type: "item",
+				item: {
+					id: "astralsorcery:constellation_paper",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							constellationName: "astralsorcery:discidia"
+						}
+					}
+				}
+			}]
+		},
+		{
+			title: "mass storing of liquid starlight",
+			x: 4.0d,
+			y: 0.5d,
+			shape: "circle",
+			description: ["You can use a fluid tank from create to mass store liquid starlight"],
+			dependencies: ["663B47790C08A031"],
+			id: "4068AB92DCB04CA2",
+			tasks: [{
+				id: "45FD99F134FB0BBC",
+				type: "item",
+				item: "astralsorcery:liquid_starlight_bucket"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -6.5d,
+			dependencies: ["49AE43745E155A45"],
+			id: "4EFC82757BE24C89",
+			tasks: [{
+				id: "31C2A7410B142DB6",
+				type: "item",
+				item: "astralsorcery:starmetal_ore"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -4.5d,
+			dependencies: ["009FC60762858942"],
+			id: "5EFE1E965811AB8F",
+			tasks: [{
+				id: "212A3E48852D30E1",
+				type: "item",
+				item: "astralsorcery:glass_lens"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: -5.0d,
+			dependencies: [
+				"5EFE1E965811AB8F",
+				"6815EF866051B250"
+			],
+			id: "49AE43745E155A45",
+			tasks: [{
+				id: "35EDB38E4BC9BA26",
+				type: "item",
+				item: {
+					id: "astralsorcery:lens",
+					Count: 1b,
+					tag: {
+						astralsorcery: {
+							crystalProperties: {
+								attributes: [
+									{
+										property: "astralsorcery:purity",
+										pLevel: 2,
+										discovered: 1b
+									},
+									{
+										property: "astralsorcery:shape",
+										pLevel: 3,
+										discovered: 1b
+									}
+								]
+							}
+						}
+					}
+				}
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -3.0d,
+			dependencies: ["009FC60762858942"],
+			id: "6815EF866051B250",
+			tasks: [{
+				id: "09457B2466D15BEB",
+				type: "item",
+				item: "astralsorcery:linking_tool"
+			}]
+		},
+		{
+			title: "Lexacon Botania",
+			icon: "botania:lexicon",
+			x: 7.0d,
+			y: 9.0d,
+			description: [
+				"Welcome to Botania this book is you guide to how everything here work.",
+				"its a lot of reading but trust me that book helps a lot."
+			],
+			dependencies: ["1BDCE3568614CB60"],
+			id: "08E3652D1C4B72F1",
+			tasks: [{
+				id: "2BA65A3BDEC1D36E",
+				type: "checkmark"
+			}],
+			rewards: [
+				{
+					id: "40723FE170A06DE2",
+					type: "item",
+					item: "botania:lexicon"
+				},
+				{
+					id: "4B95CC56292491F6",
+					type: "item",
+					item: "botania:purple_mystical_flower",
+					count: 4
+				}
+			]
+		},
+		{
+			x: 10.0d,
+			y: 9.0d,
+			dependencies: ["08E3652D1C4B72F1"],
+			id: "205E94105C1BBFFE",
+			tasks: [
+				{
+					id: "3B63EEC54FE93582",
+					type: "item",
+					item: "botania:livingrock",
+					count: 32L
+				},
+				{
+					id: "41134F43DF5A9750",
+					type: "item",
+					item: "botania:livingwood",
+					count: 32L
+				},
+				{
+					id: "0E41E9BD586D181B",
+					type: "item",
+					item: "botania:pure_daisy",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: "0095DED2B8EC6C1D",
+					type: "item",
+					item: "minecraft:ender_pearl",
+					count: 2
+				},
+				{
+					id: "48596B3617946EDE",
+					type: "item",
+					item: "botania:mana_spreader"
+				}
+			]
+		},
+		{
+			x: 12.5d,
+			y: 7.5d,
+			dependencies: ["205E94105C1BBFFE"],
+			dependency_requirement: "all_started",
+			id: "22CBC5B2E10E93EF",
+			tasks: [{
+				id: "4B62C9566E6265EF",
+				type: "item",
+				item: "botania:endoflame"
+			}],
+			rewards: [{
+				id: "6DB27EF899759C56",
+				type: "item",
+				item: "botania:mana_distributor"
+			}]
+		},
+		{
+			x: 3.5d,
+			y: 6.5d,
+			description: ["A wrench to end all wrenches."],
+			dependencies: ["1BDCE3568614CB60"],
+			id: "68C437425977AC1D",
+			tasks: [{
+				id: "1BE2A690397BFDAE",
+				type: "item",
+				item: "morphtool:tool"
+			}]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "mysticalagriculture:iron": {
+    "name": "Orange",
+    "tier": "mysticalagriculture:5"
+    "ingredient": {
+      "item": "minecraft:iron_block"
+    }
+  }
+}

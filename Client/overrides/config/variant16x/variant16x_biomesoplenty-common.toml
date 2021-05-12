@@ -1,0 +1,67 @@
+
+#'Variant16x: Biomes O' Plenty' Common Configuration File | Game Version: 1.16.5
+[variant16x_biomesoplenty]
+
+	#General Settings
+	#NOTE: Changing 'General Settings' WILL OVERRIDE Custom Settings!
+	[variant16x_biomesoplenty.general]
+		#Enables/Disables ALL Slab Variants
+		enableSlabs = true
+		#Enables/Disables ALL Stairs Variants
+		enableStairs = true
+		#Enables/Disables ALL Wall Variants
+		enableWalls = true
+		#Enables/Disables ALL Fence Variants
+		enableFences = true
+		#Enables/Disables ALL Fence Gate Variants
+		enableFenceGates = true
+		#Enables/Disables ALL Pressure Plate Variants
+		enablePressurePlates = true
+		#Enables/Disables ALL Button Variants
+		enableButtons = true
+
+	#Custom Slab Settings
+	[variant16x_biomesoplenty.slabs]
+		#Enables/Disables Wood/Hyphae Slab Variants
+		enableWoodSlabs = true
+
+	#Custom Stairs Settings
+	[variant16x_biomesoplenty.stairs]
+		#Enables/Disables Wood/Hyphae Stairs Variants
+		enableWoodStairs = true
+		#Enables/Disables Sandstone Stairs Variants
+		enableSandstoneStairs = true
+
+	#Custom Wall Settings
+	[variant16x_biomesoplenty.walls]
+		#Enables/Disables Sandstone Wall Variants
+		enableSandstoneWalls = true
+
+	#Custom Fence Settings
+	[variant16x_biomesoplenty.fences]
+		#Enables/Disables Wood/Hyphae Fence Variants
+		enableWoodFences = true
+
+	#Custom Fence Gate Settings
+	[variant16x_biomesoplenty.fenceGates]
+		#Enables/Disables Wood/Hyphae Fence Gate Variants
+		enableWoodFenceGates = true
+
+	#Custom Pressure Plate Settings
+	[variant16x_biomesoplenty.pressurePlates]
+		#Enables/Disables Wood/Hyphae Pressure Plate Variants
+		enableWoodPressurePlates = true
+		#Enables/Disables Mud Brick Pressure Plate
+		enableBrickPressurePlates = true
+		#Enables/Disables Sandstone Pressure Plate Variants
+		enableSandstonePressurePlates = true
+
+	#Custom Button Settings
+	[variant16x_biomesoplenty.buttons]
+		#Enables/Disables Wood/Hyphae Button Variants
+		enableWoodButtons = true
+		#Enables/Disables Mud Brick Button
+		enableBrickButtons = true
+		#Enables/Disables Sandstone Button Variants
+		enableSandstoneButtons = true
+

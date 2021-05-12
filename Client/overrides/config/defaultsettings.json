@@ -1,0 +1,14 @@
+{
+  "version": "${file.jarVersion}",
+  "initPopup": false,
+  "exportMode": false,
+  "generatedBy": "fcb8a290-d33f-40a1-bd63-897052e9100a",
+  "activeConfigs": [],
+  "hashes": {
+    "Default/servers.dat": "BC03A032DD6A2F4A3029EA171B7C8B0B",
+    "Default/keys.txt": "7125662112531B3F0BBA02583FD12798",
+    "Default/options.txt": "045E027B864BE317DCBA30DF729664D5"
+  },
+  "mainProfile": "Default",
+  "initially_created": "26.01.2021 16:01:15"
+}

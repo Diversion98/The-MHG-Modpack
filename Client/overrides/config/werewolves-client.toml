@@ -1,0 +1,3 @@
+#Disables the fur border at the screen edge in werewolf form
+disableScreenFurRendering = false
+

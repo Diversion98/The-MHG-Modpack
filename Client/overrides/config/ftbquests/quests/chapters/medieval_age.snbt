@@ -1,0 +1,1942 @@
+{
+	id: "0000000000000002",
+	group: "",
+	order_index: 1,
+	filename: "medieval_age",
+	title: "Medieval Age",
+	icon: "minecraft:wheat",
+	default_quest_shape: "circle",
+	quests: [
+		{
+			title: "Power Generation",
+			x: 0.0d,
+			y: -8.0d,
+			description: ["Now, the first thing you will want to craft is a Water Wheel, They require a water source on top of them that is flowing towards the front."],
+			hide_dependency_lines: false,
+			dependencies: ["0000000000000008"],
+			dependency_requirement: "one_started",
+			id: "0000000000000006",
+			tasks: [{
+				id: "0000000000000007",
+				type: "item",
+				item: "create:water_wheel"
+			}]
+		},
+		{
+			title: "So you choose for Create",
+			x: 0.0d,
+			y: -6.0d,
+			description: ["To get started in this mod, you will need copper, zinc, andesite and iron. They are the basic materials to get your first machine up and working. I suggest you make andesite alloy too which can be made from 2 andesite and 2 iron or zinc nuggets"],
+			dependencies: ["3AD002FA09F43787"],
+			dependency_requirement: "all_started",
+			id: "0000000000000008",
+			tasks: [
+				{
+					id: "000000000000000A",
+					type: "item",
+					title: "Any #forge:ingots/copper",
+					item: {
+						id: "itemfilters:tag",
+						Count: 1b,
+						tag: {
+							value: "forge:ingots/copper"
+						}
+					},
+					count: 16L
+				},
+				{
+					id: "000000000000000B",
+					type: "item",
+					title: "Any #forge:ingots/iron",
+					item: {
+						id: "itemfilters:tag",
+						Count: 1b,
+						tag: {
+							value: "forge:ingots/iron"
+						}
+					},
+					count: 16L
+				},
+				{
+					id: "000000000000000C",
+					type: "item",
+					item: "minecraft:andesite",
+					count: 16L
+				},
+				{
+					id: "000000000000000D",
+					type: "item",
+					item: "create:zinc_ingot",
+					count: 16L
+				},
+				{
+					id: "000000000000000E",
+					type: "item",
+					item: "create:andesite_alloy",
+					count: 16L
+				}
+			]
+		},
+		{
+			title: "Mechanical Press",
+			x: 0.0d,
+			y: -10.0d,
+			description: [
+				"Now, after that you will need cogwheels and shafts. Once you have these, you will want to make a Mechanical Press, this press is needed to craft Gold, Copper, Brass, and Iron Plates.",
+				"After that, a world of possibilities are open for you. Once you go to the nether though, you will want to gather some blaze rods.",
+				"These blaze rods can be used in the crafting of Brass, which is used for more complex components, better item transport, and automation."
+			],
+			dependencies: ["0000000000000006"],
+			id: "000000000000000F",
+			tasks: [{
+				id: "0000000000000010",
+				type: "item",
+				item: "create:mechanical_press"
+			}]
+		},
+		{
+			title: "Power Generation V2",
+			x: -2.5d,
+			y: -6.0d,
+			description: ["Windmills create more power than a waterwheel. The bigger the windmill, the more SU u create."],
+			dependencies: ["0000000000000006"],
+			optional: true,
+			id: "0000000000000012",
+			tasks: [
+				{
+					id: "0000000000000013",
+					type: "item",
+					item: "create:windmill_bearing"
+				},
+				{
+					id: "0000000000000014",
+					type: "item",
+					item: "minecraft:white_wool",
+					count: 8L
+				},
+				{
+					id: "0000000000000015",
+					type: "item",
+					item: {
+						id: "create:super_glue",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "0000000000000016",
+					type: "item",
+					item: "create:radial_chassis"
+				}
+			]
+		},
+		{
+			title: "I need information",
+			x: -5.0d,
+			y: -8.0d,
+			description: [
+				"Optimizing stress impact and comparing net capacity of sources at base speed can become quite scientific. For those who are interested in seeing some actual numbers and more exhaustive information,",
+				"it is recommended to look into crafting a pair of Goggles and a Stressometer"
+			],
+			dependencies: ["000000000000001F"],
+			optional: true,
+			id: "0000000000000019",
+			tasks: [
+				{
+					id: "000000000000001A",
+					type: "item",
+					item: "create:goggles"
+				},
+				{
+					id: "000000000000001B",
+					type: "item",
+					item: "create:stressometer"
+				}
+			]
+		},
+		{
+			title: "Transferring power",
+			x: -2.5d,
+			y: -8.0d,
+			description: [
+				"The most basic and cheapest way of transferring rotational force is the shaft. This will relay rotation in a straight line to all connected shafts.",
+				"Shafts also come in a encased variant, they have the same functionality, just look a bit different"
+			],
+			dependencies: ["0000000000000006"],
+			optional: true,
+			id: "000000000000001D",
+			tasks: [{
+				id: "000000000000001E",
+				type: "item",
+				item: "create:shaft"
+			}]
+		},
+		{
+			title: "Gears",
+			x: -5.0d,
+			y: -10.0d,
+			description: [
+				"While cogwheels can be used as fancy looking shafts, their main use is a little different. They will relay rotation sideways to other cogwheels while keeping the axis of rotation.",
+				"Directly adjacent cogwheels will also reverse the direction of rotation.When mixing large and small cogwheel the speed of rotation will also change.",
+				"Two large cogwheels at an 90° Angle allow for the axis of rotation to be changed."
+			],
+			dependencies: ["000000000000001D"],
+			optional: true,
+			id: "000000000000001F",
+			tasks: [
+				{
+					id: "0000000000000020",
+					type: "item",
+					item: "create:large_cogwheel"
+				},
+				{
+					id: "0000000000000021",
+					type: "item",
+					item: "create:cogwheel"
+				}
+			]
+		},
+		{
+			title: "Belts",
+			x: -5.0d,
+			y: -12.0d,
+			description: [
+				"To place down belts you will need 2 shafts facing in the same direction. They can be placed in 3 orientations, horizontal, vertical or diagonal at an 45° angle.",
+				"Click on the first shaft and you will see some particle effects to where you are looking. When looking at a valid second shaft, these particles will turn green.",
+				"Once you got a belt in place, it will relay rotation between the two shafts while keeping rotation and speed the same.",
+				"You can also click a shaft onto any piece of a belt to insert an additional pulley that you can connect components to.",
+				"Belts can also move items btw."
+			],
+			dependencies: ["000000000000001F"],
+			optional: true,
+			id: "0000000000000022",
+			tasks: [{
+				id: "0000000000000023",
+				type: "item",
+				item: "create:belt_connector"
+			}]
+		},
+		{
+			title: "Gearbox",
+			x: -2.5d,
+			y: -10.0d,
+			description: ["The gearbox is a simple block that relays rotation between 4 of its faces while reversing straight connections."],
+			dependencies: ["000000000000001D"],
+			optional: true,
+			id: "0000000000000024",
+			tasks: [{
+				id: "0000000000000025",
+				type: "item",
+				item: "create:gearbox"
+			}]
+		},
+		{
+			title: "Gearshift",
+			x: -2.5d,
+			y: -12.0d,
+			description: ["The gearshift is a simple block that acts like a shaft while unpowered, but will reverse direction of rotation when a Redstone signal is applied."],
+			dependencies: ["0000000000000024"],
+			optional: true,
+			id: "0000000000000026",
+			tasks: [{
+				id: "0000000000000027",
+				type: "item",
+				item: "create:gearshift"
+			}]
+		},
+		{
+			title: "Clutch",
+			x: -2.5d,
+			y: -14.0d,
+			description: ["The clutch is a simple block that acts like a shaft while unpowered, but will stop conveying rotation entirely when a Redstone signal is applied."],
+			dependencies: ["0000000000000026"],
+			optional: true,
+			id: "0000000000000028",
+			tasks: [{
+				id: "0000000000000029",
+				type: "item",
+				item: "create:clutch"
+			}]
+		},
+		{
+			title: "Power Generation V3",
+			x: -5.0d,
+			y: -6.0d,
+			description: [
+				"First of all, you will need 2 parts to get this generator running: The Furnace Engine itself, as well as a flywheel. The engine needs to be placed onto some furnace, then the flywheel can be attached.",
+				"To get this multiblock running, the furnace needs to be turned on. That's all. But beware, once your furnace turns off, so will the engine and all your connected machines too!"
+			],
+			dependencies: ["0000000000000012"],
+			optional: true,
+			id: "000000000000002A",
+			tasks: [{
+				id: "000000000000002B",
+				type: "item",
+				item: "create:furnace_engine"
+			}]
+		},
+		{
+			title: "Manual Power Generation",
+			x: 2.5d,
+			y: -6.0d,
+			description: [
+				"With the handcrack, u can manually power a machine with right clicking.",
+				"This is usefull if u don't want to run it constantly."
+			],
+			dependencies: ["0000000000000006"],
+			optional: true,
+			id: "000000000000002C",
+			tasks: [{
+				id: "000000000000002D",
+				type: "item",
+				item: "create:hand_crank"
+			}]
+		},
+		{
+			title: "Encased Fan",
+			x: 2.5d,
+			y: -8.0d,
+			description: ["The Encased Fan is a mechanical component added by Create that functions as a tool for moving entities and items, as a generator, and as an essential component for bulk washing, bulk smelting, and bulk smoking."],
+			dependencies: ["0000000000000006"],
+			optional: true,
+			id: "000000000000002E",
+			tasks: [{
+				id: "000000000000002F",
+				type: "item",
+				item: "create:encased_fan"
+			}]
+		},
+		{
+			x: 5.0d,
+			y: -10.0d,
+			description: [
+				"When the air flow of an Encased Fan passes through water, fire, lava, a Blaze Burner, or a Campfire, the air flow downstream of the relevant block will apply processing recipes to items that pass through.",
+				"",
+				"Bulk Washing: an air flow containing water will apply bulk washing recipes.",
+				"Bulk Smoking: an air flow containing fire, an unheated Blaze Burner, or a Campfire will apply any recipe that can be applied in a Smoker.",
+				"Bulk Blasting: an air flow containing lava or a heated Blaze Burner will apply any smelting recipe that can be applied in a furnace but not a smoker.",
+				"",
+				"These recipes can be applied to items either in the world or on a Mechanical Belt.",
+				"",
+				"Warning: passing incompatible items through bulk blasting, such as your tools or smoking recipes, will incinerate them. This can be disastrous if you're not careful, or useful for quick item disposal. Filters can help control which items get",
+				"extracted to be bulk blasted."
+			],
+			dependencies: ["000000000000002E"],
+			optional: true,
+			id: "0000000000000030",
+			tasks: [{
+				id: "0000000000000031",
+				type: "checkmark",
+				title: "Bulk item processing"
+			}]
+		},
+		{
+			x: 5.0d,
+			y: -8.0d,
+			description: [
+				"When an Encased Fan is placed facedown directly over a heat source (fire, lava, a Blaze Burner, a campfire, or magma) and powered by redstone, it will provide 16 SU per RPM at a speed 4 RPM.",
+				"This is tied with a Windmill Bearing attached to a single Sail as the most compact power source in Create."
+			],
+			dependencies: ["000000000000002E"],
+			optional: true,
+			id: "0000000000000032",
+			tasks: [{
+				id: "0000000000000033",
+				type: "checkmark",
+				title: "Power generation with encased fan"
+			}]
+		},
+		{
+			x: 5.0d,
+			y: -6.0d,
+			description: ["When connected to rotational force, an Encased Fan creates an air flow in the several blocks in front of it, which will either push or pull entities or items depending on the direction of rotation."],
+			dependencies: ["000000000000002E"],
+			optional: true,
+			id: "0000000000000034",
+			tasks: [{
+				id: "0000000000000035",
+				type: "checkmark",
+				title: "Pushing and pulling"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: -14.0d,
+			description: [
+				"Funnels are used to extract or insert items from/in a container.",
+				"place a container next to a belt but 1 block higher. Then click with the funnel on the container at the side with the belt."
+			],
+			dependencies: ["0000000000000022"],
+			optional: true,
+			id: "0000000000000036",
+			tasks: [{
+				id: "0000000000000037",
+				type: "item",
+				item: "create:andesite_funnel"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: -10.0d,
+			description: [
+				"U can store fluids into fluid tanks but you need fluid pumps.",
+				"Starlight from Astral Sorcery can also be stored in to the fluid tanks from the create mod."
+			],
+			dependencies: ["000000000000000F"],
+			optional: true,
+			id: "000000000000004C",
+			tasks: [
+				{
+					id: "000000000000004D",
+					type: "item",
+					item: "create:fluid_tank"
+				},
+				{
+					id: "000000000000004E",
+					type: "item",
+					item: "create:fluid_pipe"
+				}
+			]
+		},
+		{
+			title: "Mixing",
+			icon: "create:mechanical_mixer",
+			x: 0.0d,
+			y: -12.0d,
+			dependencies: ["000000000000000F"],
+			id: "1367E4A4E486CB16",
+			tasks: [
+				{
+					id: "06B94B94821AECB2",
+					type: "item",
+					item: "create:basin"
+				},
+				{
+					id: "2ED6D350CB865A32",
+					type: "item",
+					item: "create:mechanical_mixer"
+				}
+			]
+		},
+		{
+			title: "Blaze Burner",
+			icon: "create:blaze_burner",
+			x: 0.0d,
+			y: -14.0d,
+			dependencies: ["1367E4A4E486CB16"],
+			id: "583127AE861587B9",
+			tasks: [{
+				id: "781678F4F8B57086",
+				type: "item",
+				item: "create:blaze_burner"
+			}]
+		},
+		{
+			title: "Proceed to the Industrial Age 1",
+			icon: "create:brass_ingot",
+			x: 0.0d,
+			y: -16.0d,
+			shape: "square",
+			dependencies: ["583127AE861587B9"],
+			id: "1106CD1467098314",
+			tasks: [{
+				id: "65231867F3486E34",
+				type: "item",
+				item: "create:brass_ingot"
+			}],
+			rewards: [{
+				id: "62F8717ADEBABC6A",
+				type: "gamestage",
+				auto: "enabled",
+				stage: "industrial_age"
+			}]
+		},
+		{
+			title: "The Medieval Age",
+			icon: "minecraft:wheat",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "hexagon",
+			description: [
+				"Welcome to the Medieval Age.",
+				"",
+				"U are now a Knight instead of Caveman.",
+				"Huge upgrade right?",
+				"",
+				"Still need some work to do to go to the moon.",
+				"",
+				"From now on, u have different choices to progress to the next age.",
+				"Choose a path."
+			],
+			id: "3AD002FA09F43787",
+			tasks: [{
+				id: "447DC326130904DD",
+				type: "checkmark",
+				title: "Welcome to the Medieval Age",
+				icon: "minecraft:wheat"
+			}]
+		},
+		{
+			title: "Better Food",
+			x: 2.5d,
+			y: -2.5d,
+			dependencies: ["3AD002FA09F43787"],
+			optional: true,
+			id: "750C12A482AD8799",
+			tasks: [
+				{
+					id: "01BDAE9E1B9D820B",
+					type: "item",
+					item: "cookingforblockheads:cooking_table"
+				},
+				{
+					id: "1115DFCDE448FBCE",
+					type: "item",
+					item: "cookingforblockheads:oven"
+				},
+				{
+					id: "18B5D7F571B40A5A",
+					type: "item",
+					item: "cookingforblockheads:sink"
+				},
+				{
+					id: "2316B1AA8DE13978",
+					type: "item",
+					item: "cookingforblockheads:fridge"
+				}
+			],
+			rewards: [{
+				id: "0DAE2BCCCB30D92B",
+				type: "item",
+				item: "pamhc2foodcore:chickendinneritem",
+				count: 5
+			}]
+		},
+		{
+			title: "Make your own Music",
+			icon: "xercamusic:guitar",
+			x: -2.5d,
+			y: -2.5d,
+			description: [
+				'This little mod called "Music Maker Mod" by Xerca0 is a fun little mod to make your own music.',
+				"",
+				"Get creative!"
+			],
+			dependencies: ["3AD002FA09F43787"],
+			optional: true,
+			id: "13EDC7824C448B5A",
+			tasks: [
+				{
+					id: "4CFBB410A5CD1147",
+					type: "item",
+					item: "xercamusic:music_sheet"
+				},
+				{
+					id: "2E94EEC12936E6FB",
+					type: "item",
+					item: "xercamusic:guitar"
+				},
+				{
+					id: "5884F23602A86AE0",
+					type: "item",
+					item: "xercamusic:music_box"
+				}
+			],
+			rewards: [{
+				id: "023E9F11B0436A73",
+				type: "item",
+				item: "xercamusic:piano"
+			}]
+		},
+		{
+			title: "Proceed to the Industrial Age 2",
+			icon: "vampirism:vampire_fang",
+			x: 8.0d,
+			y: 0.0d,
+			shape: "square",
+			description: [
+				"U are so close to being a vampire Lord.",
+				"",
+				"Reach level 14 and u will get a special task to be the Lord. But for your hard work, u go to the Industrial Age when u reach vampire level 14."
+			],
+			dependencies: ["7B5B2592D0C5202C"],
+			id: "74F27E2516032FD3",
+			tasks: [{
+				id: "2AF6D6FBBF87506A",
+				type: "advancement",
+				icon: "vampirism:vampire_fang",
+				advancement: "vampirism:vampire/max_level",
+				criterion: ""
+			}],
+			rewards: [{
+				id: "319ABB469381EC9C",
+				type: "gamestage",
+				auto: "enabled",
+				stage: "industrial_age"
+			}]
+		},
+		{
+			x: 6.0d,
+			y: 0.0d,
+			dependencies: ["3AD002FA09F43787"],
+			id: "7B5B2592D0C5202C",
+			tasks: [{
+				id: "3CB2B503542011FA",
+				type: "advancement",
+				title: "Become a vampire",
+				icon: "vampirism:vampire_fang",
+				advancement: "vampirism:vampire/become_vampire",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Mayor wanted!",
+			icon: "minecolonies:supplycampdeployer",
+			x: 0.0d,
+			y: 6.0d,
+			description: ["New mayor wanted, we need a town!"],
+			dependencies: ["3AD002FA09F43787"],
+			id: "0BFA6CEE546C3990",
+			tasks: [{
+				id: "3E943B4A6400EB2D",
+				type: "checkmark"
+			}],
+			rewards: [
+				{
+					id: "0261804900323323",
+					type: "item",
+					item: "minecolonies:supplycampdeployer",
+					only_one: true
+				},
+				{
+					id: "0BB7ED309FC8A327",
+					type: "item",
+					team_reward: true,
+					item: "minecolonies:supplychestdeployer",
+					only_one: true
+				},
+				{
+					id: "5FF2391B84F3ED71",
+					type: "advancement",
+					auto: "invisible",
+					advancement: "minecolonies:minecolonies/root",
+					criterion: ""
+				}
+			]
+		},
+		{
+			title: "Builder's Hut",
+			x: 0.0d,
+			y: 10.0d,
+			description: ["Before you choose a place to build the Builder’s Hut, take into account the distances among the other possible building sites and obstacles like water, trees, caves, mountains, lava sources, etc. After you have selected a place for the hut, you have to craft the Builder’s Hut block and place it with your build tool. Once the hut is placed, the Builder will be automatically assigned (or you can manually assign one with the best Traits for a Builder if you changed this in the settings tab in the Town Hall’s GUI."],
+			dependencies: ["133A3BA5AB21BBC1"],
+			id: "063854091763C413",
+			tasks: [
+				{
+					id: "42E6FCD5C7F0F2C7",
+					type: "item",
+					item: "minecolonies:blockhutbuilder"
+				},
+				{
+					id: "3B3FDFB3D06F4D31",
+					type: "advancement",
+					title: "Build Builder's Hut",
+					icon: "minecolonies:blockhutbuilder",
+					advancement: "minecolonies:minecolonies/build_builder",
+					criterion: ""
+				}
+			]
+		},
+		{
+			title: "Extracting elements",
+			x: -8.0d,
+			y: 2.0d,
+			description: [
+				"First u need containers to hold the elements u gather.",
+				"U gather elements with an element extractor.",
+				"place the extractor on top of the container. The extractor should be 1 block under the desired element."
+			],
+			dependencies: ["610180E1002D60A1"],
+			id: "35FEC68407264605",
+			tasks: [
+				{
+					id: "4A7BBADC3F665E95",
+					type: "item",
+					item: "elementalcraft:tank_small"
+				},
+				{
+					id: "44D2B5372B477F32",
+					type: "item",
+					item: "elementalcraft:extractor"
+				}
+			]
+		},
+		{
+			title: "Elemental Pipes",
+			x: -10.0d,
+			y: 2.0d,
+			description: ["To transport the elements, u will need pipes. For now u can just use the basic elemental pipe."],
+			dependencies: ["35FEC68407264605"],
+			id: "00EAE1364DABEAE8",
+			tasks: [{
+				id: "07239CE3CEB9F355",
+				type: "item",
+				item: "elementalcraft:elementpipe"
+			}]
+		},
+		{
+			title: "Infusing",
+			x: -12.0d,
+			y: 2.0d,
+			description: ["With the infuser, u can infuse items to add some good stats. Refer to the book for more information."],
+			dependencies: ["00EAE1364DABEAE8"],
+			id: "5FAADB90457B3C4E",
+			tasks: [{
+				id: "32C93594D7B9F8F5",
+				type: "item",
+				item: "elementalcraft:infuser"
+			}]
+		},
+		{
+			title: "Evaporate shards",
+			x: -6.0d,
+			y: 2.0d,
+			description: ["U can also evaporate elemental shards to get the elements but this is way slower than extracting from a node."],
+			dependencies: ["35FEC68407264605"],
+			optional: true,
+			id: "579B1A20A832BD8E",
+			tasks: [{
+				id: "2BF126A089DF08D2",
+				type: "item",
+				item: "elementalcraft:evaporator"
+			}]
+		},
+		{
+			title: "Bigger Container",
+			x: -14.0d,
+			y: 2.0d,
+			description: ["Bigger storage for your elements."],
+			dependencies: ["5FAADB90457B3C4E"],
+			id: "3D5FBD7A5DC5848E",
+			tasks: [{
+				id: "7B61C0CADE4ED076",
+				type: "item",
+				item: "elementalcraft:tank"
+			}]
+		},
+		{
+			x: -16.0d,
+			y: 2.0d,
+			dependencies: ["3D5FBD7A5DC5848E"],
+			id: "53B9AEBFC31FAB1D",
+			tasks: [{
+				id: "4EE8ED390D8B3983",
+				type: "item",
+				item: "elementalcraft:binder"
+			}]
+		},
+		{
+			title: "Improved element binder",
+			x: -16.0d,
+			y: 4.5d,
+			dependencies: ["53B9AEBFC31FAB1D"],
+			optional: true,
+			id: "2E2B94BC6887A588",
+			tasks: [{
+				id: "7375B1109C5EB983",
+				type: "item",
+				item: "elementalcraft:binder_improved"
+			}]
+		},
+		{
+			title: "Improved extractor",
+			x: -6.0d,
+			y: 4.5d,
+			description: ["Extract elements at a faster rate."],
+			dependencies: ["35FEC68407264605"],
+			optional: true,
+			id: "0955F98C195CA155",
+			tasks: [{
+				id: "61A788F756CEE119",
+				type: "item",
+				item: "elementalcraft:extractor_improved"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: 2.5d,
+			description: [
+				"With this station, u can get even more decorations blocks.",
+				"",
+				"What are u waiting for? Build something!"
+			],
+			dependencies: ["3AD002FA09F43787"],
+			id: "561CC0386B9C6C92",
+			tasks: [{
+				id: "14927D85F13889B0",
+				type: "item",
+				item: "chiselsandbits:chisel_printer"
+			}]
+		},
+		{
+			x: 0.0d,
+			y: 12.0d,
+			dependencies: ["063854091763C413"],
+			id: "6FAC7F683DE97756",
+			tasks: [
+				{
+					id: "5746C97CD2B790F6",
+					type: "item",
+					item: "minecolonies:blockhuttownhall"
+				},
+				{
+					id: "3B0517EB3D36003D",
+					type: "advancement",
+					title: "Build Town Hall",
+					advancement: "minecolonies:minecolonies/build_town_hall",
+					criterion: ""
+				}
+			]
+		},
+		{
+			title: "Restaurant",
+			x: -2.5d,
+			y: 12.0d,
+			description: ["The Restaurant is where the Cook will cook food, provided they have the necessary ingredients and fuel. When citizens are hungry, they will come to the Restaurant and the Cook will give them food. The Assistant Cook also works at the Restaurant. They craft needed food to help supply the colony."],
+			dependencies: ["6FAC7F683DE97756"],
+			id: "7F19F7E48E8D511C",
+			tasks: [{
+				id: "2B8529A2D60EF398",
+				type: "advancement",
+				title: "Build Restaurant",
+				icon: "minecolonies:blockhutcook",
+				advancement: "minecolonies:production/build_cook",
+				criterion: ""
+			}]
+		},
+		{
+			x: 5.0d,
+			y: 10.0d,
+			description: ["Don't be a monster and give your people a place to sleep."],
+			dependencies: ["0D590D8DC7E8C98D"],
+			optional: true,
+			id: "76E1E368B7DBAF55",
+			tasks: [{
+				id: "7580C80BC67105CA",
+				type: "advancement",
+				title: "Build House",
+				icon: "minecolonies:blockhutcitizen",
+				advancement: "minecolonies:minecolonies/build_citizen",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Wanna control the 4 elements huh?",
+			x: -6.0d,
+			y: 0.0d,
+			dependencies: ["3AD002FA09F43787"],
+			id: "610180E1002D60A1",
+			tasks: [{
+				id: "4F28B635756EA43F",
+				type: "item",
+				item: "elementalcraft:inertcrystal",
+				count: 4L
+			}],
+			rewards: [{
+				id: "3493DB208BBB41F4",
+				type: "item",
+				item: {
+					id: "patchouli:guide_book",
+					Count: 1b,
+					tag: {
+						"patchouli:book": "elementalcraft:element_book"
+					}
+				}
+			}]
+		},
+		{
+			x: -16.0d,
+			y: 0.0d,
+			description: ["With this machine, u can start making pure crystals"],
+			dependencies: ["53B9AEBFC31FAB1D"],
+			id: "4A7E4DC6B9DCA43E",
+			tasks: [{
+				id: "641A085FB43DA241",
+				type: "item",
+				item: "elementalcraft:pureinfuser"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: 4.5d,
+			dependencies: ["00EAE1364DABEAE8"],
+			optional: true,
+			id: "36E75C4CE6FC706F",
+			tasks: [
+				{
+					id: "37EBD39139CFCA04",
+					type: "item",
+					item: "elementalcraft:elementpipe_improved"
+				},
+				{
+					id: "115FF496DC32ED1B",
+					type: "item",
+					item: "elementalcraft:elementpipe_impaired"
+				}
+			]
+		},
+		{
+			x: -12.0d,
+			y: 4.5d,
+			description: ["U can smelt recipes without fuel but u need a container with fire under the furnace."],
+			dependencies: ["5FAADB90457B3C4E"],
+			optional: true,
+			id: "00CE15EB785DEF0E",
+			tasks: [
+				{
+					id: "343F55D81775ADAA",
+					type: "item",
+					item: "elementalcraft:firefurnace"
+				},
+				{
+					id: "542806B714C45844",
+					type: "item",
+					item: "elementalcraft:fireblastfurnace"
+				}
+			]
+		},
+		{
+			x: -18.0d,
+			y: 2.0d,
+			dependencies: ["53B9AEBFC31FAB1D"],
+			id: "6D96D3C5426D5948",
+			tasks: [{
+				id: "445749D33683B92C",
+				type: "item",
+				item: "elementalcraft:crystallizer"
+			}]
+		},
+		{
+			x: -18.0d,
+			y: 0.0d,
+			description: ["The ore purifier can double your ore."],
+			dependencies: ["6D96D3C5426D5948"],
+			id: "30D1320574DDC22F",
+			tasks: [{
+				id: "0A634349D789EB64",
+				type: "item",
+				item: "elementalcraft:purifier"
+			}]
+		},
+		{
+			x: -10.0d,
+			y: 4.5d,
+			description: [
+				"The output retriever acts like a hopper.",
+				"If you have a machine with an item in it after crafting, u can output it to a chest with the output retriever."
+			],
+			dependencies: ["00EAE1364DABEAE8"],
+			optional: true,
+			id: "475A360A648F72C5",
+			tasks: [{
+				id: "7A9A8FAFC7E296B3",
+				type: "item",
+				item: "elementalcraft:instrument_retriever"
+			}]
+		},
+		{
+			title: "Spells",
+			x: -8.0d,
+			y: 0.0d,
+			dependencies: ["610180E1002D60A1"],
+			id: "472B945827CAC65F",
+			tasks: [
+				{
+					id: "37C42F7624A09A0D",
+					type: "item",
+					item: "elementalcraft:spell_desk"
+				},
+				{
+					id: "4BFAF744A415E7E6",
+					type: "item",
+					item: "elementalcraft:focus"
+				},
+				{
+					id: "35C34E7C8105DD0A",
+					type: "item",
+					item: "elementalcraft:scroll_paper"
+				}
+			]
+		},
+		{
+			x: -14.0d,
+			y: 0.0d,
+			description: ["This block is nice for decorations but is also wither proof so it's excellent to trap withers in."],
+			dependencies: ["4A7E4DC6B9DCA43E"],
+			id: "7BDB3D21CCB6B3CE",
+			tasks: [{
+				id: "74C6CF6F9ED89CBE",
+				type: "item",
+				item: "elementalcraft:purerock"
+			}]
+		},
+		{
+			x: -10.0d,
+			y: 0.0d,
+			description: ["This book can hold upto 100 spells."],
+			dependencies: ["1C6762F98525A727"],
+			optional: true,
+			id: "4716BF19C1855AB2",
+			tasks: [{
+				id: "3790FB07DB30BE2F",
+				type: "item",
+				item: {
+					id: "elementalcraft:spell_book",
+					Count: 1b,
+					tag: {
+						Damage: 100
+					}
+				}
+			}]
+		},
+		{
+			title: "All the spells!",
+			x: -10.0d,
+			y: -2.5d,
+			dependencies: ["472B945827CAC65F"],
+			id: "1C6762F98525A727",
+			tasks: [
+				{
+					id: "55F2CDD9E4FB9B85",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:gravelfall"
+							}
+						}
+					}
+				},
+				{
+					id: "512AF776050D174A",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:stonewall"
+							}
+						}
+					}
+				},
+				{
+					id: "73639136C55B14FD",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:fireball"
+							}
+						}
+					}
+				},
+				{
+					id: "3227586821392888",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:item_pull"
+							}
+						}
+					}
+				},
+				{
+					id: "1B2AC9032B053CA0",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:ender_strike"
+							}
+						}
+					}
+				},
+				{
+					id: "52C30A9AA777C7A0",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:animal_growth"
+							}
+						}
+					}
+				},
+				{
+					id: "4639F8FD23F17A34",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:tree_fall"
+							}
+						}
+					}
+				},
+				{
+					id: "004FC8CFA5487F3D",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:purification"
+							}
+						}
+					}
+				},
+				{
+					id: "2657120DE29940A6",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:ripening"
+							}
+						}
+					}
+				},
+				{
+					id: "72E17F4DAF0E2722",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:flame_cleave"
+							}
+						}
+					}
+				},
+				{
+					id: "77446CECF9D66D32",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:inferno"
+							}
+						}
+					}
+				},
+				{
+					id: "699AFB9D534FD2A3",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:dash"
+							}
+						}
+					}
+				},
+				{
+					id: "45651B24BF5AAFE8",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:silk_vein"
+							}
+						}
+					}
+				},
+				{
+					id: "52AF548CC275B256",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:heal"
+							}
+						}
+					}
+				},
+				{
+					id: "46AF8C0AE4AF6782",
+					type: "item",
+					item: {
+						id: "elementalcraft:scroll",
+						Count: 1b,
+						tag: {
+							elementalcraft: {
+								spell: "elementalcraft:speed"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			x: -12.0d,
+			y: 0.0d,
+			description: [
+				"Shrines can help u automating stuff.",
+				"",
+				"Automation with just elements?",
+				"",
+				"Yes! But at the cost of the extracted elements."
+			],
+			dependencies: ["5FAADB90457B3C4E"],
+			id: "2A5B6B5215296065",
+			tasks: [{
+				id: "404A3FD8C23033F8",
+				type: "item",
+				item: "elementalcraft:shrinebase"
+			}]
+		},
+		{
+			x: -13.5d,
+			y: -7.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "01D46F21DD4374B2",
+			tasks: [{
+				id: "332E39E3B9B7D638",
+				type: "item",
+				item: "elementalcraft:vacuumshrine"
+			}]
+		},
+		{
+			x: -14.0d,
+			y: -5.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "46664106F0F01C58",
+			tasks: [{
+				id: "2FCB79B7723BD776",
+				type: "item",
+				item: "elementalcraft:growthshrine"
+			}]
+		},
+		{
+			x: -12.5d,
+			y: -4.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "5EDC61CEAD2C2300",
+			tasks: [{
+				id: "13BC9A77E937D21B",
+				type: "item",
+				item: "elementalcraft:harvestshrine"
+			}]
+		},
+		{
+			x: -14.0d,
+			y: -6.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "0FE7118AC9202F19",
+			tasks: [{
+				id: "1CAB9A2EEFB30B73",
+				type: "item",
+				item: "elementalcraft:lavashrine"
+			}]
+		},
+		{
+			x: -12.5d,
+			y: -7.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "6CEFD03713065B5E",
+			tasks: [{
+				id: "6C1E331A2DA5E9C3",
+				type: "item",
+				item: "elementalcraft:oreshrine"
+			}]
+		},
+		{
+			x: -13.5d,
+			y: -4.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "59E5050622F7D594",
+			tasks: [{
+				id: "03EA7AAF9B69CBBC",
+				type: "item",
+				item: "elementalcraft:overloadshrine"
+			}]
+		},
+		{
+			x: -12.0d,
+			y: -6.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "602511D6E4EB7994",
+			tasks: [{
+				id: "08A4F3BC3EF3DE61",
+				type: "item",
+				item: "elementalcraft:sweetshrine"
+			}]
+		},
+		{
+			x: -13.0d,
+			y: -6.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "341C7DF8E191C8F2",
+			tasks: [{
+				id: "28FA67A9C7292E76",
+				type: "item",
+				item: "elementalcraft:enderlockshrine"
+			}]
+		},
+		{
+			x: -13.0d,
+			y: -5.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "0BA7AA2B628DE942",
+			tasks: [{
+				id: "52EC2A8D1E221CE6",
+				type: "item",
+				item: "elementalcraft:breedingshrine"
+			}]
+		},
+		{
+			x: -12.0d,
+			y: -5.0d,
+			hide_dependency_lines: true,
+			dependencies: ["2A5B6B5215296065"],
+			optional: true,
+			id: "45D4BF8EAF849BE1",
+			tasks: [{
+				id: "45073D2E0A715EBA",
+				type: "item",
+				item: "elementalcraft:groveshrine"
+			}]
+		},
+		{
+			x: -14.0d,
+			y: 4.5d,
+			description: ["Reservoirs are the biggest storages for storaging elements."],
+			dependencies: ["3D5FBD7A5DC5848E"],
+			optional: true,
+			id: "7D08959D73553DCB",
+			tasks: [
+				{
+					id: "322A1CE0389A55AC",
+					type: "item",
+					item: "elementalcraft:reservoir_air"
+				},
+				{
+					id: "185E31AA76EAC983",
+					type: "item",
+					item: "elementalcraft:reservoir_fire"
+				},
+				{
+					id: "7697761ED674DED9",
+					type: "item",
+					item: "elementalcraft:reservoir_water"
+				},
+				{
+					id: "6F4C7E43F681B401",
+					type: "item",
+					item: "elementalcraft:reservoir_earth"
+				}
+			]
+		},
+		{
+			title: "Proceed to the Industrial Age 4",
+			x: -16.0d,
+			y: -2.5d,
+			shape: "square",
+			dependencies: [
+				"2A5B6B5215296065",
+				"30D1320574DDC22F",
+				"1C6762F98525A727",
+				"7BDB3D21CCB6B3CE"
+			],
+			id: "3FA11500AFF66BA8",
+			tasks: [{
+				id: "17E3CB97F9DF1BB5",
+				type: "checkmark",
+				icon: "titanium:iron_gear"
+			}],
+			rewards: [{
+				id: "4BE1B20A6C65DDC0",
+				type: "gamestage",
+				auto: "invisible",
+				stage: "industrial_age"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: 10.0d,
+			description: [
+				"Some shelter for your people without needing any housing.",
+				"",
+				"Great to start your colony."
+			],
+			dependencies: ["6FAC7F683DE97756"],
+			optional: true,
+			id: "0D590D8DC7E8C98D",
+			tasks: [{
+				id: "50DEE2640C9BB322",
+				type: "advancement",
+				title: "Build Tavern",
+				icon: "minecolonies:blockhuttavern",
+				advancement: "minecolonies:minecolonies/build_tavern",
+				criterion: ""
+			}]
+		},
+		{
+			x: 0.0d,
+			y: 8.0d,
+			description: ["This tools helps visualizing and finetune the building u want to place"],
+			dependencies: ["0BFA6CEE546C3990"],
+			id: "133A3BA5AB21BBC1",
+			tasks: [{
+				id: "73273505638CB098",
+				type: "item",
+				item: "structurize:sceptergold"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: 15.0d,
+			dependencies: ["1504CAFE2DDE84F6"],
+			optional: true,
+			id: "7188C2087902DE4B",
+			tasks: [{
+				id: "5EFF83E539B146DF",
+				type: "item",
+				item: "minecolonies:blockhutmysticalsite"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: 16.5d,
+			dependencies: ["7F19F7E48E8D511C"],
+			id: "1504CAFE2DDE84F6",
+			tasks: [{
+				id: "7BCFFF23567F767D",
+				type: "item",
+				item: "minecolonies:blockhutuniversity"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: 13.5d,
+			description: [""],
+			dependencies: ["6FAC7F683DE97756"],
+			optional: true,
+			id: "03CFD7927D79201C",
+			tasks: [{
+				id: "54FD4B15E46B79FD",
+				type: "advancement",
+				title: "Build Guard Tower",
+				icon: "minecolonies:blockhutguardtower",
+				advancement: "minecolonies:minecolonies/build_guard_tower",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Barracks",
+			x: -5.0d,
+			y: 18.0d,
+			description: ["The Barracks is the ultimate protection for your colony. The Barracks will hold 4 Barracks Towers within its structure. The Barracks Towers (unlike the normal Guard Towers) will employ and house 1 Guard for every level built! Each new Guard will need a bed in a house in order to spawn. However, once they are hired at the Barracks Tower, that becomes their new residence and the bed in the house will open up for another new citizen. Each Barracks Tower can house and employ 5 Guards for a total of 20 Guards for your colony."],
+			dependencies: ["1504CAFE2DDE84F6"],
+			optional: true,
+			id: "42813648724A1728",
+			tasks: [{
+				id: "2E68F6B931123BBC",
+				type: "item",
+				item: "minecolonies:blockhutbarracks"
+			}]
+		},
+		{
+			x: -7.0d,
+			y: 16.5d,
+			description: ["The Archery is where your Archers in Training will train to become Archer Guards. This also allows them to level up without a risk of dying to mobs. A new Archer in Training will need a bed in a house in order to spawn. However, once they are hired at the Archery, that becomes their new residence and the bed in the house will open up for another new citizen (child or recruit)."],
+			dependencies: ["42813648724A1728"],
+			optional: true,
+			id: "6510999937996312",
+			tasks: [{
+				id: "087FE4D14546AC18",
+				type: "item",
+				item: "minecolonies:blockhutarchery"
+			}]
+		},
+		{
+			title: "Warehouse",
+			x: 2.5d,
+			y: 14.0d,
+			description: ["A warehouse is the heart of your automation in your colony. You can't automate your colony without a warehouse."],
+			dependencies: ["6FAC7F683DE97756"],
+			optional: true,
+			id: "1678CCF3D0608E65",
+			tasks: [{
+				id: "4BE47D945BFE40C8",
+				type: "advancement",
+				title: "Build warehouse",
+				icon: "minecolonies:blockhutwarehouse",
+				advancement: "minecolonies:production/build_warehouse",
+				criterion: ""
+			}]
+		},
+		{
+			x: 5.0d,
+			y: 14.0d,
+			description: ["The Courier is a critial part of the bloodline of your colony. They will run from worker’s hut to Warehouse to worker’s hut, visiting all your workers and delivering the tools and materials they need as well as taking their production to the Warehouse."],
+			dependencies: ["28B6E96DD72BC393"],
+			optional: true,
+			id: "2E4961DDB324839B",
+			tasks: [{
+				id: "7F42D1F6F7BB689B",
+				type: "advancement",
+				title: "Build Courier's Hut",
+				icon: "minecolonies:blockhutdeliveryman",
+				advancement: "minecolonies:production/build_delivery_person",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Sawmill",
+			x: 2.5d,
+			y: 16.5d,
+			dependencies: ["1678CCF3D0608E65"],
+			optional: true,
+			id: "28B6E96DD72BC393",
+			tasks: [{
+				id: "4FA3095E39C6885E",
+				type: "advancement",
+				title: "Build Sawmill",
+				icon: "minecolonies:blockhutsawmill",
+				advancement: "minecolonies:production/build_sawmill",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Delivery",
+			x: 5.0d,
+			y: 16.5d,
+			description: [
+				"The Stash lets you deposit items that you want to be picked up by a Courier to take to the Warehouse.",
+				"",
+				"The Postbox lets you request items from the Warehouse. A Courier will deliver them to the postbox."
+			],
+			dependencies: ["2E4961DDB324839B"],
+			optional: true,
+			id: "34D538ACCF71930F",
+			tasks: [
+				{
+					id: "79F119011D73C66D",
+					type: "item",
+					item: "minecolonies:blockstash"
+				},
+				{
+					id: "48E248EA316908BB",
+					type: "item",
+					item: "minecolonies:blockpostbox"
+				}
+			]
+		},
+		{
+			title: "Crusher",
+			x: 0.0d,
+			y: 14.0d,
+			description: [
+				"The Crusher’s Hut is where the Crusher will take items and crush them into other blocks.",
+				"",
+				"- Cobblestone gives Gravel (chance to get flint)",
+				"- Gravel gives Sand",
+				"- Sand gives Clay"
+			],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "48A067AF058826F7",
+			tasks: [{
+				id: "14973025DB44E25F",
+				type: "advancement",
+				title: "Build Crusher",
+				icon: "minecolonies:blockhutcrusher",
+				advancement: "minecolonies:production/build_crusher",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Blacksmith",
+			x: 0.0d,
+			y: 19.0d,
+			description: ["The Blacksmith is a 3x3 crafter and can make any vanilla tools, armor, swords, and shields (no bows or redstone items). The Blacksmith will work when they receive a request for any of those items from another worker."],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "3F99C24EBCC4F75D",
+			tasks: [{
+				id: "7B9E96ECDD6BF018",
+				type: "advancement",
+				title: "Build Blacksmith",
+				icon: "minecolonies:blockhutblacksmith",
+				advancement: "minecolonies:production/build_blacksmith",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Stonemason",
+			x: 0.0d,
+			y: 16.0d,
+			description: ["The Stonemason’s Hut is where the Stonemason will craft 3x3 recipes made entirely out of cobblestone, stone, andesite, diorite, granite, quartz, purpur, nether bricks, prismarine, sandstones, blackstone, basalt, and/or ores (no ingots or redstone items). They can also craft end stone from cobblestone and an ender pearl, but only if you have completed the Know the End research in the University. The Stonemason will only work when they receive a request from another worker and have the needed materials. You will also need to teach the Stonemason’s Hut the recipes you want the Stonemason to craft."],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "6338DC5100AC9EA0",
+			tasks: [{
+				id: "719E82577380755B",
+				type: "advancement",
+				title: "Build Stonemason",
+				icon: "minecolonies:blockhutstonemason",
+				advancement: "minecolonies:production/build_stonemason",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Smeltery",
+			x: 0.0d,
+			y: 17.0d,
+			description: [
+				"The Smeltery is where the Smelter will smelt ores into ingots.",
+				"",
+				"Hint: The higher the level of the Smeltery, the more furnaces the Smelter will be able to use. A higher level will also have a higher chance to double and even triple the ingot output per block of ore. The Smelter’s Strength level will sometimes determine the chance to double or triple the ingot output of ores, according to the Smeltery level."
+			],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "1035E375F4B144B0",
+			tasks: [{
+				id: "381FE6399B99DACC",
+				type: "advancement",
+				title: "Build Smeltery",
+				icon: "minecolonies:blockhutsmeltery",
+				advancement: "minecolonies:production/build_smeltery",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Stone Smeltery",
+			x: 0.0d,
+			y: 18.0d,
+			description: ["The Stone Smeltery is where the Stone Smelter will smelt cobblestone into stone, stone bricks into cracked stone bricks, clay balls into bricks, clay blocks into terracotta, terracotta into glazed terracotta, all types of stone into all types of smooth stone, and logs into charcoal. They can also pop chorus fruits! The Stone Smelter will only work when they have been taught the recipe, receive a request from another worker, and have the needed materials."],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "0D0A738BF1CB0E68",
+			tasks: [{
+				id: "16E304FE6E3E9470",
+				type: "advancement",
+				title: "Build Stone Smeltery",
+				icon: "minecolonies:blockhutstonesmeltery",
+				advancement: "minecolonies:production/build_stone_smeltery",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Sifter's Hut",
+			x: 0.0d,
+			y: 15.0d,
+			description: ["The Sifter’s Hut is where the Sifter will sift through dirt, gravel, sand, or soul sand to find loot. Doing this will make the block the Sifter is sifting disappear."],
+			dependencies: [
+				"1504CAFE2DDE84F6",
+				"28B6E96DD72BC393"
+			],
+			optional: true,
+			id: "1C56EA0D190731D1",
+			tasks: [{
+				id: "52D1A3574D22F849",
+				type: "advancement",
+				title: "Build Sifter's hut",
+				icon: "minecolonies:blockhutsifter",
+				advancement: "minecolonies:production/build_sifter",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Baker",
+			x: -5.0d,
+			y: 10.0d,
+			description: ["The Baker will craft bread dough, cookie dough, cake dough, and raw pumpkin pie, then bake these in a furnace to create bread, cookies, cakes, and pumpkin pies. They will only do this upon request, whether from the Cook, the postbox, or as a minimum stock in the Warehouse."],
+			dependencies: ["7F19F7E48E8D511C"],
+			optional: true,
+			id: "666F7176B8F3E360",
+			tasks: [{
+				id: "7FEF46A35DD799E9",
+				type: "advancement",
+				title: "Build Baker",
+				icon: "minecolonies:blockhutbaker",
+				advancement: "minecolonies:production/build_baker",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Fisher's Hut",
+			x: -5.0d,
+			y: 12.0d,
+			dependencies: ["7F19F7E48E8D511C"],
+			optional: true,
+			id: "698783E6F5108F9A",
+			tasks: [{
+				id: "0505B30E078AA55F",
+				type: "advancement",
+				title: "Build Fisher's Hut",
+				icon: "minecolonies:blockhutfisherman",
+				advancement: "minecolonies:production/build_fisherman",
+				criterion: ""
+			}]
+		},
+		{
+			x: -7.0d,
+			y: 18.0d,
+			description: ["The Barracks Towers will employ and house 1 Guard for every level built (unlike the normal Guard Towers, which can only have 1 Guard at a time). Each new Guard will need a bed in a house in order to spawn. However, once they are hired at the Barracks Tower, that becomes their new residence and the bed in the house will open up for another new citizen (child or recruit)."],
+			dependencies: ["42813648724A1728"],
+			optional: true,
+			id: "0417BDD4D375940C",
+			tasks: [{
+				id: "2E687963AD199EA1",
+				type: "item",
+				item: "minecolonies:blockhutbarrackstower"
+			}]
+		},
+		{
+			x: -7.0d,
+			y: 19.5d,
+			description: ["The Combat Academy is where your Knights in Training will train to become Knight Guards. This also allows them to level up without a risk of dying to mobs. A new Knight in Training will need a bed in a house in order to spawn. However, once they are hired at the Combat Academy, that becomes their new residence and the bed in the house will open up for another new citizen (child or recruit)."],
+			dependencies: ["42813648724A1728"],
+			optional: true,
+			id: "23FDF713652C7071",
+			tasks: [{
+				id: "38D52DA10A2EE43C",
+				type: "item",
+				item: "minecolonies:blockhutcombatacademy"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: 10.0d,
+			description: ["The Forester’s Hut is where the Forester will go in between chopping down trees. The Forester will cut down any tree in an approximate 150 block area (from themselves) that is not in a hut schematic and doesn’t have cobblestone placed beneath it."],
+			dependencies: ["6FAC7F683DE97756"],
+			optional: true,
+			id: "146A08D1698BF574",
+			tasks: [{
+				id: "4E40745F31A2A4C2",
+				type: "item",
+				item: "minecolonies:blockhutlumberjack"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: 16.5d,
+			description: ["The Library is a way for you to raise your adult citizens’ Intelligence skill, which influences all other skill increases (at other jobs). A citizen will randomly level up their Intelligence as long as they’re assigned to the Library. Being a Library Student is their full-time job, so you can’t have one citizen work at the Library and another worker hut at the same time."],
+			dependencies: ["1504CAFE2DDE84F6"],
+			id: "2612DE04FA8E7439",
+			tasks: [{
+				id: "4A2348BE4DB2933B",
+				type: "item",
+				item: "minecolonies:blockhutlibrary"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: 14.0d,
+			description: ["The Farm is where the Farmer will grow crops for your colony. The crops the Farmer currently cultivates are wheat, carrots, potatoes, beets, melons, pumpkins, and most crops from other mods (as long as they have normal growth behavior). Before the Farmer can start, you will have to give the Farmer a hoe, an axe (for harvesting crops), and the crop you want to cultivate."],
+			dependencies: ["7F19F7E48E8D511C"],
+			optional: true,
+			id: "60F673D2A0E5823D",
+			tasks: [
+				{
+					id: "5B16C91D5095FA51",
+					type: "item",
+					item: "minecolonies:blockhutfarmer"
+				},
+				{
+					id: "15975AF4412C7435",
+					type: "item",
+					item: "minecolonies:blockhutfield"
+				}
+			]
+		},
+		{
+			x: -2.5d,
+			y: 19.0d,
+			description: ["The School is where the Teacher will level up the Pupils’ (children) skills. Paper will increase the leveling speed of the Pupils."],
+			dependencies: ["1504CAFE2DDE84F6"],
+			id: "71C5BE3E350A643B",
+			tasks: [{
+				id: "7C7527E1345F079F",
+				type: "item",
+				item: "minecolonies:blockhutschool"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: 12.0d,
+			description: [
+				"The Mine is where the Miner will mine for ores and materials. Once they are hired, the Miner will create a shaft downward and then branch out.",
+				"",
+				"Hint: The shaft the Miner creates downwards will go to a specific depth depending on the level of the Mine:",
+				"level 1: y = 50",
+				"level 2: y = 30",
+				"level 3: bedrock"
+			],
+			dependencies: ["6FAC7F683DE97756"],
+			optional: true,
+			id: "71B7E7EA4915265C",
+			tasks: [{
+				id: "62ECFEA0FD854553",
+				type: "item",
+				item: "minecolonies:blockhutminer"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: 21.0d,
+			description: [
+				"The Enchanter’s Tower is where the Enchanter will create enchanted books, as long as they have Ancient Tomes. The Enchanter will collect XP from other workers to create the enchanted books. The higher their Mana level, the more XP they will collect per trip. They will not apply the enchanted books to tools and armor, you must do that yourself.",
+				"",
+				"The higher the level of the Enchanter’s Tower, the higher the level of the enchanted books the Enchanter will produce (the Enchanter’s Knowledge level also contributes to this)."
+			],
+			dependencies: ["71C5BE3E350A643B"],
+			id: "7B9FBF14DEBB6291",
+			tasks: [{
+				id: "2FC53B9187DCA7A0",
+				type: "item",
+				item: "minecolonies:blockhutenchanter"
+			}]
+		},
+		{
+			title: "Proceed to the Industrial Age 3",
+			icon: "titanium:iron_gear",
+			x: 0.0d,
+			y: 21.0d,
+			shape: "square",
+			description: ["To proceed to the Industrial Age, reach a population of 50 in your Colony."],
+			dependencies: ["71C5BE3E350A643B"],
+			id: "2E4049C168D7B636",
+			tasks: [{
+				id: "0B1201C0433ED130",
+				type: "advancement",
+				advancement: "minecolonies:minecolonies/colony_population_50",
+				criterion: ""
+			}]
+		},
+		{
+			x: 5.0d,
+			y: 12.0d,
+			description: ["Have a miner mine to bedrock."],
+			dependencies: ["71B7E7EA4915265C"],
+			optional: true,
+			id: "22B89C1BD05C73DB",
+			tasks: [{
+				id: "0BBBF830746ADF37",
+				type: "advancement",
+				title: "Rock Bottom",
+				icon: "minecraft:bedrock",
+				advancement: "minecolonies:production/deep_mine",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Composter's Hut",
+			x: -7.0d,
+			y: 14.0d,
+			description: ["The Composter’s Hut is where the Composter will turn organic materials into compost, which can be used by the Farmer or Florist to fertilize crops or flowers. They can also create dirt if you have the setting enabled, which the Builder can use in buildings. The Composter uses compost barrels to make compost or dirt."],
+			dependencies: ["60F673D2A0E5823D"],
+			optional: true,
+			id: "48090475A3DA6094",
+			tasks: [{
+				id: "1B5AB2F281FC61E3",
+				type: "advancement",
+				title: "Build Composter's Hut",
+				icon: "minecolonies:blockhutcomposter",
+				advancement: "minecolonies:production/build_composter",
+				criterion: ""
+			}]
+		},
+		{
+			x: 2.5d,
+			y: 19.0d,
+			description: ["The Mechanic’s Hut is where the Mechanic will craft redstone items, rails, minecarts, clocks, compasses, sea lanterns, torches, lanterns, jack-o-lanterns, storage blocks (like blocks of iron, coal, quartz, etc), dried kelp blocks, blue ice, packed ice, enchantment tables, ender chests, tripwire hooks, sticky pistons, gates, multi-pistons, glowstone blocks, anything made with blaze rods, and many other items that no other crafter can make. For the Mechanic to work, they must receive a request from another worker and have the necessary materials. The Mechanic’s Hut must also have been taught the crafting recipes for all the items you want the Mechanic to be able to craft."],
+			dependencies: ["3F99C24EBCC4F75D"],
+			optional: true,
+			id: "379FDB524F71760E",
+			tasks: [{
+				id: "42DEA5A35AD32952",
+				type: "item",
+				item: "minecolonies:blockhutmechanic"
+			}]
+		},
+		{
+			x: -7.0d,
+			y: 12.0d,
+			dependencies: ["60F673D2A0E5823D"],
+			optional: true,
+			id: "79628652418A1047",
+			tasks: [{
+				id: "008C57C4F21C4DE4",
+				type: "advancement",
+				title: "Build all 5 possible herders.",
+				icon: "minecolonies:blockhutshepherd",
+				advancement: "minecolonies:production/build_all_herders",
+				criterion: ""
+			}]
+		}
+	]
+}

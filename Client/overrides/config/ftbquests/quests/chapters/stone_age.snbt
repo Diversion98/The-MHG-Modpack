@@ -1,0 +1,695 @@
+{
+	id: "282A2391C75D30EE",
+	group: "",
+	order_index: 0,
+	filename: "stone_age",
+	title: "Stone Age",
+	icon: "minecraft:stone",
+	default_quest_shape: "",
+	quests: [
+		{
+			title: "Getting Started in the Stone Age",
+			icon: "minecraft:oak_log",
+			x: -2.0d,
+			y: -0.5d,
+			shape: "hexagon",
+			description: [
+				"Welcome fellow caveman.",
+				"Your journey to be an astronaut starts here.",
+				"",
+				"Astronaut? whats that?",
+				"Don't worry, u will learn about space when u are ready for it.",
+				"",
+				"For now, start chopping wood with your bare fists.",
+				"",
+				"The Akashic Tome makes it possible to store multiple books in it."
+			],
+			id: "4019BB5A3776AFB3",
+			tasks: [{
+				id: "735394DD9D5B53AC",
+				type: "item",
+				title: "Any #minecraft:logs",
+				item: {
+					id: "itemfilters:tag",
+					Count: 1b,
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+			}],
+			rewards: [{
+				id: "5E1222E1015D6E5D",
+				type: "item",
+				item: "akashictome:tome"
+			}]
+		},
+		{
+			title: "Get Some Tools",
+			icon: {
+				id: "minecraft:wooden_pickaxe",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 0.0d,
+			y: -0.5d,
+			description: [
+				"U fists hurt u say?",
+				"",
+				"Well why don't u make some tools to help u a bit."
+			],
+			dependencies: ["4019BB5A3776AFB3"],
+			id: "39F7BDFADE7E4471",
+			tasks: [
+				{
+					id: "7205E6A56DC822BF",
+					type: "item",
+					item: {
+						id: "minecraft:wooden_pickaxe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "03A8F9C457FB85B3",
+					type: "item",
+					item: {
+						id: "minecraft:wooden_axe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "3066417E8A10943B",
+					type: "item",
+					item: {
+						id: "minecraft:wooden_shovel",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: "4D6AA7F3644006F1",
+					type: "item",
+					item: {
+						id: "minecraft:leather_helmet",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "3321B8074792AD14",
+					type: "item",
+					item: {
+						id: "minecraft:leather_chestplate",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "6D7DC4FDCB9BA7D5",
+					type: "item",
+					item: {
+						id: "minecraft:leather_leggings",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: "52817CB9043F19B7",
+					type: "item",
+					item: {
+						id: "minecraft:leather_boots",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Smelting",
+			icon: "minecraft:furnace",
+			x: 2.0d,
+			y: -0.5d,
+			description: [
+				"Raw meat? yummy!",
+				"Try to cook it, it will taste even better.",
+				"",
+				"You found some precious ores?",
+				"U might want to upgrade your tools then.",
+				"But u gonna need to smelt the ores first."
+			],
+			dependencies: ["39F7BDFADE7E4471"],
+			id: "0681554CBA544BD6",
+			tasks: [{
+				id: "7C1174943C911022",
+				type: "item",
+				item: "minecraft:furnace"
+			}],
+			rewards: [{
+				id: "44FE180C015D3934",
+				type: "item",
+				item: "minecraft:iron_ore",
+				count: 3
+			}]
+		},
+		{
+			title: "Don't starve",
+			icon: "pamhc2crops:eggplantitem",
+			x: 1.0d,
+			y: 3.5d,
+			description: [
+				"U gonna need a source of food.",
+				"Without it, u won't be going to reach the Medieval Age.",
+				"",
+				"U will need water near your crops.",
+				"Make sure u don't jump on your crops thoughs."
+			],
+			dependencies: ["23B62CD7C8026FA9"],
+			optional: true,
+			id: "537D604B01F06CE1",
+			tasks: [{
+				id: "7343D3FA7FB56462",
+				type: "item",
+				item: "pamhc2crops:eggplantitem",
+				count: 5L
+			}]
+		},
+		{
+			title: "Exploration",
+			icon: "minecraft:oak_boat",
+			x: 1.0d,
+			y: -2.5d,
+			description: [
+				"This world isn't just filled with flowers and trees.",
+				"U might want to explore a bit.",
+				"You will be surprised what u can find.",
+				"",
+				"Warning: GEAR UP!"
+			],
+			dependencies: ["39F7BDFADE7E4471"],
+			optional: true,
+			id: "72E71307C93517FA",
+			tasks: [{
+				id: "431932F3FFA9CC9A",
+				type: "item",
+				title: "Any #transport:hulls/boat",
+				item: {
+					id: "itemfilters:tag",
+					Count: 1b,
+					tag: {
+						value: "transport:hulls/boat"
+					}
+				}
+			}],
+			rewards: [{
+				id: "70610D3040836162",
+				type: "item",
+				item: {
+					id: "pickletweaks:flint_sword",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		},
+		{
+			title: "Farming",
+			icon: {
+				id: "minecraft:wooden_hoe",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 1.0d,
+			y: 1.5d,
+			dependencies: ["39F7BDFADE7E4471"],
+			optional: true,
+			id: "23B62CD7C8026FA9",
+			tasks: [{
+				id: "5168A0369F092677",
+				type: "item",
+				item: {
+					id: "minecraft:wooden_hoe",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [{
+				id: "63DEADF685BFBA03",
+				type: "item",
+				item: "pamhc2crops:eggplantseeditem"
+			}]
+		},
+		{
+			title: "Time to get rich!",
+			icon: "minecraft:diamond",
+			x: 4.0d,
+			y: -0.5d,
+			description: [
+				"Time to look for some tasty blue gems.",
+				"Those will help u making your tools/armor better.",
+				"",
+				"U will need more than 1 though."
+			],
+			dependencies: ["0681554CBA544BD6"],
+			id: "004FE6C23A1BBCD4",
+			tasks: [{
+				id: "4EC9E3E7655CBFDD",
+				type: "item",
+				item: "minecraft:diamond"
+			}]
+		},
+		{
+			title: "Lazy Caveman",
+			icon: {
+				id: "waterstrainer:strainer_survivalist",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: -1.0d,
+			y: 1.5d,
+			description: [
+				"A strainer will help u gettin common resources.",
+				"Place the strainer base inside a pool of water (the base needs water on top).",
+				"",
+				"Put your strainer into the base.",
+				"",
+				"The strainer will now filter the water for items. The list of items depends on the strainer type.",
+				"",
+				"Water height/flow and biome type will influence the efficiency."
+			],
+			dependencies: ["39F7BDFADE7E4471"],
+			optional: true,
+			id: "0E22CAD8CD1F0053",
+			tasks: [
+				{
+					id: "27AAD72A279D6BB5",
+					type: "item",
+					item: "waterstrainer:strainer_base"
+				},
+				{
+					id: "0FD41EA3FC1DAEF9",
+					type: "item",
+					item: {
+						id: "waterstrainer:strainer_survivalist",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [{
+				id: "567E2FC0B7CD758D",
+				type: "item",
+				item: "minecraft:tropical_fish",
+				count: 3
+			}]
+		},
+		{
+			title: "Advent of Ascension (Nevermine)",
+			x: -3.0d,
+			y: 1.5d,
+			description: [
+				"Be sure to check your skills.",
+				'Press "delete" on your keyboard to see the skills menu.',
+				"",
+				"U have a lot to do to upgrade your stats caveman."
+			],
+			dependencies: ["4019BB5A3776AFB3"],
+			optional: true,
+			id: "17E2BBE8D305ACFF",
+			tasks: [{
+				id: "647A50C2CE18F3B5",
+				type: "checkmark",
+				title: "Advent of Ascension (Nevermine)"
+			}]
+		},
+		{
+			title: "Hell ahead!",
+			icon: "minecraft:red_nether_bricks",
+			x: 5.0d,
+			y: -2.5d,
+			description: [
+				"The overworld and the nether aren't the only dimensions.",
+				"",
+				"Now that u can travel through a nether portal, u can get even more resources."
+			],
+			dependencies: ["004FE6C23A1BBCD4"],
+			optional: true,
+			id: "44047184926A6483",
+			tasks: [{
+				id: "7CF02A36E2E6EC28",
+				type: "dimension",
+				dimension: "minecraft:nether"
+			}]
+		},
+		{
+			title: "Blasting them resources",
+			icon: "minecraft:blast_furnace",
+			x: 3.0d,
+			y: -2.5d,
+			description: [
+				"There should be a way to smelt resources more efficient.",
+				"",
+				"For now, the blast furnace will help u smelt ores twice as fast."
+			],
+			dependencies: ["0681554CBA544BD6"],
+			optional: true,
+			id: "0E0A6E9F389B8C89",
+			tasks: [{
+				id: "614232979CC8D53D",
+				type: "item",
+				item: "minecraft:blast_furnace"
+			}]
+		},
+		{
+			title: "Breadcrumbs",
+			icon: "minecraft:bread",
+			x: 3.0d,
+			y: 1.5d,
+			dependencies: [
+				"23B62CD7C8026FA9",
+				"0681554CBA544BD6"
+			],
+			optional: true,
+			id: "006882091A2FF3C9",
+			tasks: [{
+				id: "72BC7EADAC712E83",
+				type: "item",
+				item: "minecraft:bread"
+			}],
+			rewards: [{
+				id: "7FFDF634F62ED972",
+				type: "item",
+				item: "pamhc2foodcore:basicchickensandwichitem",
+				count: 5
+			}]
+		},
+		{
+			title: "/home",
+			x: -4.0d,
+			y: -0.5d,
+			description: [
+				"If you got a cosy place, u can use /sethome in chat to make your house a home.",
+				"whenever u want to go back, just do /home."
+			],
+			dependencies: ["4019BB5A3776AFB3"],
+			optional: true,
+			id: "773DC6E158D62F07",
+			tasks: [{
+				id: "6BF3046144048F2A",
+				type: "checkmark",
+				title: "Home"
+			}]
+		},
+		{
+			title: "Your first ore doubler",
+			icon: "tconstruct:smeltery_controller",
+			x: 8.0d,
+			y: -0.5d,
+			description: [
+				"Thats a load of stuff u need.",
+				"",
+				"Thank god it isn't that hard to make.",
+				"U are almost there to finally double your ore output.",
+				"",
+				"Oh, u need the bucket of lava so u can put the lava in the tank.",
+				"This smeltery runs on lava or molten blaze."
+			],
+			dependencies: ["140E70C9089596D0"],
+			id: "6BE3C81740D5F73A",
+			tasks: [
+				{
+					id: "64892E1E95B341CE",
+					type: "item",
+					title: "Any #tconstruct:seared_blocks",
+					item: {
+						id: "itemfilters:tag",
+						Count: 1b,
+						tag: {
+							value: "tconstruct:seared_blocks"
+						}
+					},
+					count: 18L
+				},
+				{
+					id: "794A6F00A0A8C4E9",
+					type: "item",
+					item: "tconstruct:casting_table"
+				},
+				{
+					id: "06A4060C6B659836",
+					type: "item",
+					item: "tconstruct:casting_basin"
+				},
+				{
+					id: "6A38296B1510F26A",
+					type: "item",
+					item: "tconstruct:faucet",
+					count: 2L
+				},
+				{
+					id: "24FF4B201E933C95",
+					type: "item",
+					item: "tconstruct:seared_tank"
+				},
+				{
+					id: "08A33E129037C375",
+					type: "item",
+					item: "tconstruct:seared_drain"
+				},
+				{
+					id: "271E8EB196524F9E",
+					type: "item",
+					item: "tconstruct:smeltery_controller"
+				},
+				{
+					id: "61B02884B74E0954",
+					type: "item",
+					item: "minecraft:lava_bucket"
+				}
+			],
+			rewards: [{
+				id: "2EE7AF9222B141CF",
+				type: "item",
+				item: "tconstruct:seared_ladder",
+				count: 3
+			}]
+		},
+		{
+			title: "Starting early ore doubling",
+			icon: "tconstruct:grout",
+			x: 6.0d,
+			y: -0.5d,
+			description: [
+				"We know u want to double your ore output.",
+				"Well good for you that this step is the first step to that.",
+				"",
+				"U gonna need a shovel though."
+			],
+			dependencies: ["004FE6C23A1BBCD4"],
+			id: "140E70C9089596D0",
+			tasks: [
+				{
+					id: "673FAFD33187135E",
+					type: "item",
+					item: "minecraft:dirt",
+					count: 16L
+				},
+				{
+					id: "7A0B298601259DE7",
+					type: "item",
+					item: "minecraft:sand",
+					count: 16L
+				},
+				{
+					id: "3D3E2D72CABC4E85",
+					type: "item",
+					item: "minecraft:gravel",
+					count: 16L
+				}
+			],
+			rewards: [{
+				id: "27C2E22D6A79218A",
+				type: "item",
+				item: "tconstruct:grout",
+				count: 16
+			}]
+		},
+		{
+			title: "Get some better tools part 1",
+			icon: "tconstruct:pattern",
+			x: -1.0d,
+			y: -2.5d,
+			description: [
+				"With patterns u can make parts for your future tools.",
+				"",
+				"U also need them to make the tables."
+			],
+			dependencies: ["39F7BDFADE7E4471"],
+			optional: true,
+			id: "4C83E72B9604F0F7",
+			tasks: [{
+				id: "41FD4FD6A07D0CB4",
+				type: "item",
+				item: "tconstruct:pattern",
+				count: 7L
+			}],
+			rewards: [{
+				id: "5B05CE2823CCF5CE",
+				type: "item",
+				item: "tconstruct:materials_and_you"
+			}]
+		},
+		{
+			title: "Get some better tools part 2",
+			icon: "tconstruct:crafting_station",
+			x: -1.0d,
+			y: -4.5d,
+			description: [
+				"With Tinkers Construct, u can make way better tools than vanilla Minecraft.",
+				"",
+				"U choose the materials but watch out, u have good and bad materials."
+			],
+			dependencies: ["4C83E72B9604F0F7"],
+			optional: true,
+			id: "458F5F00BEEEEDC7",
+			tasks: [
+				{
+					id: "68771889826AFC00",
+					type: "item",
+					item: "tconstruct:crafting_station"
+				},
+				{
+					id: "208CC79CD11D251A",
+					type: "item",
+					item: {
+						id: "tconstruct:tinker_station",
+						Count: 1b,
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+				},
+				{
+					id: "2D84788E6C0FE5E7",
+					type: "item",
+					item: {
+						id: "tconstruct:part_builder",
+						Count: 1b,
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+				},
+				{
+					id: "4FB689C94CD769BE",
+					type: "item",
+					item: "tconstruct:part_chest"
+				},
+				{
+					id: "0E71A1B097AF7277",
+					type: "item",
+					item: "tconstruct:modifier_chest"
+				},
+				{
+					id: "320A44FA8190C315",
+					type: "item",
+					item: "tconstruct:cast_chest"
+				}
+			],
+			rewards: [{
+				id: "65C7D1F569AAA307",
+				type: "item",
+				item: "tconstruct:pattern",
+				count: 4
+			}]
+		},
+		{
+			title: "Proceed to the Medieval Age",
+			icon: "tconstruct:ingot_cast",
+			x: 10.0d,
+			y: -0.5d,
+			shape: "square",
+			description: [
+				"Before u can use your smeltery for ingots, u first need to make an ingot cast.",
+				"",
+				"Now that u can double your ores, we think your worthy enough to proceed to the Medieval age.",
+				"",
+				"Good luck on your journey!"
+			],
+			dependencies: ["6BE3C81740D5F73A"],
+			id: "68BB0F8316A869DC",
+			tasks: [{
+				id: "128869F41CBB3A2F",
+				type: "item",
+				item: "tconstruct:ingot_cast"
+			}],
+			rewards: [
+				{
+					id: "349976F4246D4BF2",
+					type: "item",
+					item: "minecraft:gold_ore",
+					count: 2
+				},
+				{
+					id: "187E8DF1971FF7E3",
+					type: "gamestage",
+					title: "Proceed to the Medieval Age, my knight.",
+					auto: "invisible",
+					stage: "medieval_age"
+				}
+			]
+		},
+		{
+			title: "Time to get even richer!",
+			x: 5.0d,
+			y: 1.5d,
+			dependencies: ["004FE6C23A1BBCD4"],
+			optional: true,
+			id: "0B56C7A762958A0F",
+			tasks: [{
+				id: "029B17868A2D40D1",
+				type: "item",
+				item: "minecraft:emerald"
+			}]
+		},
+		{
+			x: 5.0d,
+			y: 3.5d,
+			dependencies: ["0B56C7A762958A0F"],
+			optional: true,
+			id: "54BA5B743B15C686",
+			tasks: [{
+				id: "35765048B3C03A5C",
+				type: "item",
+				item: "waystones:waystone"
+			}]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+
+[world_gen]
+
+	#Customize ore lava crystal stone, obsidian, compressed world generation (in that order)
+	[world_gen.lava_crystal]
+		#Enable/Disable their world generation
+		enable = [true, true, true]
+		#Set the vein size
+		vein_size = [5, 4, 3]
+		#Set the Y offset, Example: 
+		#Offset: 4 - Sets the minimum Y height to 4.
+		offset = [12, 6, 0]
+		#Set the vein size, Example: 
+		#Range: 8 - Sets the maximum Y height to 8.
+		range = [20, 10, 4]
+
+	#Customize ore frost crystal stone, obsidian, compressed world generation (in that order)
+	[world_gen.frost_crystal]
+		#Enable/Disable their world generation
+		enable = [true, true, true]
+		#Set the vein size
+		vein_size = [5, 4, 3]
+		#Set the Y offset, Example: 
+		#Offset: 4 - Sets the minimum Y height to 4.
+		offset = [12, 6, 0]
+		#Set the vein size, Example: 
+		#Range: 8 - Sets the maximum Y height to 8.
+		range = [20, 10, 4]
+
+[advancements]
+	#Enable/Disable the Thank You 6M advancement
+	enableThankYou6M = false
+
+[items]
+	#Infused Lava Tools: Smelting Recipe Input (Blocks)
+	smeltingInput = ["minecraft:iron_ore", "minecraft:gold_ore", "minecraft:sand", "minecraft:sandstone", "minecraft:wet_sponge", "minecraft:clay", "minecraft:stone_bricks", "minecraft:cobblestone", "minecraft:stone", "minecraft:acacia_log", "minecraft:birch_log", "minecraft:dark_oak_log", "minecraft:jungle_log", "minecraft:oak_log", "minecraft:spruce_log", "minecraft:netherrack", "minecraft:ancient_debris", "minecraft:stone_bricks"]
+	#Infused Lava Tools: Smelting Recipe Output (Items)
+	smeltingOutput = ["minecraft:iron_ingot", "minecraft:gold_ingot", "minecraft:glass", "minecraft:smooth_sandstone", "minecraft:sponge", "minecraft:terracotta", "minecraft:cracked_stone_bricks", "minecraft:stone", "minecraft:stone", "minecraft:charcoal", "minecraft:charcoal", "minecraft:charcoal", "minecraft:charcoal", "minecraft:charcoal", "minecraft:charcoal", "minecraft:nether_brick", "minecraft:netherite_scrap", "minecraft:cracked_stone_bricks"]
+
